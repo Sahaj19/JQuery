@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applying Basic CSS</title>
+  </head>
+  <body>
+    <div id="box">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis,
+        itaque? Hic reprehenderit voluptate rem enim iusto fugit nam in a!
+      </p>
+    </div>
+    <script src="../jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("body").css("backgroundColor", "black");
+
+        $("#box").css({
+          maxWidth: "200" + "px",
+          color: "white",
+          backgroundColor: "steelblue",
+          padding: "20" + "px",
+        });
+
+        let boxContent = $("#box").html();
+        console.log(boxContent);
+      });
+    </script>
+  </body>
+</html>
