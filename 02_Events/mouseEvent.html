@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Event</title>
+  </head>
+  <body>
+    <div class="box">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aut atque
+        ab quam omnis, saepe, voluptatem in sequi, ad delectus nesciunt illo
+        molestias? Libero ad fugit aliquam eius veniam, deserunt in nihil iure.
+        Dolorem necessitatibus ex quis rerum magni veniam.
+      </p>
+    </div>
+    <button class="btn">Click Me</button>
+    <script src="../jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".box").css({
+          margin: "50px auto",
+          border: "1px solid #000",
+          padding: "20px",
+        });
+
+        $(".box").mouseenter(function () {
+          $(this).css("backgroundColor", "steelblue");
+        });
+
+        $(".box").mouseleave(function () {
+          $(this).css("backgroundColor", "white");
+        });
+
+        $(".btn").click(function () {
+          $(".box p").css("textDecoration", "underline");
+        });
+
+        $(".btn").dblclick(function () {
+          $(".box p").css("textDecoration", "none");
+        });
+      });
+    </script>
+  </body>
+</html>
