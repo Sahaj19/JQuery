@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors in JQuery</title>
+  </head>
+
+  <body>
+    <h1 class="heading">My Heading</h1>
+    <h2 id="subHeading">My Sub Heading</h2>
+    <ul>
+      <li>Item-1</li>
+      <li>Item-2</li>
+      <li>Item-3</li>
+    </ul>
+    <div class="box">
+      <p>Lorem ipsum</p>
+      <p>Lorem ipsum, dolor sit amet</p>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, iste
+      </p>
+    </div>
+    <script src="../jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("*").css({
+          margin: "0",
+          padding: "0",
+          boxSizing: "borderBox",
+        });
+
+        $(".heading").css({
+          color: "white",
+          backgroundColor: "#000",
+          marginBottom: "20px",
+          padding: "5px 10px",
+          textAlign: "center",
+        });
+
+        $("#subHeading").css({
+          fontSize: "50px",
+          textAlign: "center",
+          color: "steelblue",
+        });
+
+        $("ul").css({
+          maxWidth: "400px",
+          margin: "20px auto",
+        });
+
+        $("ul li").css({
+          border: "2px solid #000",
+          padding: "20px",
+        });
+
+        $(".box").css({
+          border: "2px solid #000",
+          maxWidth: "700px",
+          margin: "20px auto",
+        });
+
+        $(".box p").css({
+          textAlign: "center",
+        });
+
+        $(".box p:first").css({
+          backgroundColor: "red",
+        });
+
+        $(".box p:last").css({
+          backgroundColor: "steelblue",
+        });
+      });
+    </script>
+  </body>
+</html>
