@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Events</title>
+  </head>
+  <body>
+    <form action="" id="form">
+      <label for="name">Name</label>
+      <input type="text" id="name" /> <br />
+      <br />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" /> <br />
+      <br />
+
+      <label for="country">Countries</label>
+      <select id="country">
+        <option value="choose country" disabled>Choose..</option>
+        <option value="India">India</option>
+        <option value="Japan">Japan</option>
+        <option value="China">China</option>
+      </select>
+
+      <br />
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="box"></div>
+
+    <script src="../jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#form").css({
+          border: "2px solid #000",
+          maxWidth: "500px",
+          margin: "20px auto",
+          textAlign: "center",
+          padding: "20px",
+        });
+
+        $(".box").css({
+          textAlign: "center",
+          border: "2px solid #000",
+        });
+
+        $("#name , #email , #country").focus(function () {
+          $(this).css("backgroundColor", "steelblue");
+        });
+
+        $("#name , #email , #country").blur(function () {
+          $(this).css("backgroundColor", "white");
+        });
+
+        $("#country").change(function () {
+          let value = $("#country").val();
+          $(".box").html(value);
+        });
+
+        $("#form").submit(function (event) {
+          alert("Form Submitted!");
+        });
+      });
+    </script>
+  </body>
+</html>
