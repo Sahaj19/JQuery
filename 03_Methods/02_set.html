@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery set method</title>
+  <style>
+    .red {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Heading Value</h1>
+    <p class="para1">Lorem ipsum dolor sit amet.</p>
+    <p class="para2">I will get red class.</p>
+  </div>
+
+  <form>
+    <label for="name">Name</label>
+    <input type="text" id="name">
+  </form>
+
+  <button id="setValue">Set Value</button>
+  <script src="../jquery.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $("form #name").val("Sahaj Arora")
+
+      $("#setValue").click(function() {
+        $(".container .heading").html("My Name is <b>Sahaj Arora</b>");
+        $(".container .para1").text("And my aim is to become a frontend web developer");
+        $(".container .para2").attr("class","red");
+      })
+    })
+  </script>
+</body>
+</html>
