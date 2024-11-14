@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery after & before methods</title>
+</head>
+<body>
+  <div class="container">
+    <h2>I am inside the container.</h2>
+  </div>
+  <button id="before">Before</button>
+  <button id="after">After</button>
+  <script src="../jquery.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".container").css({
+        backgroundColor: "pink",
+        border: "1px solid black",
+        padding: "10px",
+        margin: "10px 0"
+      })
+
+      $("#before").click(function() {
+        $(".container").before("<h1>I am Before Container</h1>")
+      })
+
+      $("#after").click(function() {
+        $(".container").after("<h3>I am After Container</h3>")
+      })
+
+    })
+  </script>
+</body>
+</html>

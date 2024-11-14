@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery on() & off() methods</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>My Name is Sahaj Arora</p>
+    </div>
+    <button id="remove">Remove Events</button>
+    <script src="../jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        //default styling
+        $(".container").css({
+          border: "1px solid black",
+          padding: "10px",
+          margin: "10px 0",
+          maxWidth: "400px",
+          textAlign: "center",
+        });
+
+        //on events
+        $(".container").on({
+          click: function () {
+            $(".container p").css("fontWeight", "bold");
+          },
+          mouseover: function () {
+            $(".container").css("backgroundColor", "pink");
+          },
+          mouseout: function () {
+            $(".container").css("backgroundColor", "white");
+          },
+        });
+
+        //off events
+        $("#remove").click(function () {
+          $(".container").off("click mouseover mouseout");
+        });
+      });
+    </script>
+  </body>
+</html>

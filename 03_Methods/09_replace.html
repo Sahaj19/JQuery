@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQuery replace methods</title>
+</head>
+<body>
+  <div class="container">
+    <p class="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, assumenda!</p>
+    <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, doloribus?</p>
+    <p class="para3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, debitis.</p>
+  </div>
+  <button id="replaceOne">Replace One</button>
+  <button id="replaceAll">Replace All</button>
+  <script src="../jquery.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#replaceOne").click(function() {
+        $(".para1").replaceWith("<h1>I am heading One!</h1>")
+      })
+
+      $("#replaceAll").click(function() {
+        $(".para1").replaceWith("<h1>I am heading One!</h1>")
+        $(".para2").replaceWith("<h2>I am heading Two!</h2>")
+        $(".para3").replaceWith("<h3>I am heading Three!</h3>")
+      })
+    })
+  </script>
+</body>
+</html>

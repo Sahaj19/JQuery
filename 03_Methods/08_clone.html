@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery clone method</title>
+  </head>
+  <body>
+    <button id="originalBtn">Original Button</button>
+    <div class="container"></div>
+    <script src="../jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        //original button click event
+        $("#originalBtn").click(function () {
+          alert("Hello World!");
+        });
+
+        //clone without event handler
+        const cloneBtn = $("#originalBtn").clone();
+        cloneBtn.text("Cloned Button Without Event Handler");
+        $(".container").append(cloneBtn);
+
+        //clone with event handler
+        const cloneBtnWithHandler = $("#originalBtn").clone(true);
+        cloneBtnWithHandler.text("Cloned Button With Event Handler");
+        $(".container").append(cloneBtnWithHandler);
+      });
+    </script>
+  </body>
+</html>

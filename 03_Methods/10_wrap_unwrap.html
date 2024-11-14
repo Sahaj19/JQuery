@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery wrap & unwrap methods</title>
+    <style>
+      .box {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JQuery wrap methods</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <button id="wrapOne">Wrap One</button>
+    <button id="wrapAll">Wrap All</button>
+    <button id="innerWrap">Inner Wrap First Para</button>
+    <button id="unwrap">UnWrap</button>
+    <script src="../jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        //first click this btn
+        $("#wrapOne").click(function () {
+          $(".container h1").wrap("<div class='box'></div>");
+        });
+
+        //then this btn
+        $("#wrapAll").click(function () {
+          $(".container p").wrapAll("<div class='box'></div>");
+        });
+
+        //and then this btn
+        $("#innerWrap").click(function() {
+          $(".container p:first").wrapInner("<b></b>");
+        })
+
+        //and then finally this btn
+        $("#unwrap").click(function () {
+          $(".container p").unwrap();
+          $(".container h1").unwrap();
+        });
+      });
+    </script>
+  </body>
+</html>
